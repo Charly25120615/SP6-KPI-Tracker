@@ -1,48 +1,145 @@
-<script>
-    let globalData, mainChart;
-
-    async function init() {
-        const res = await fetch('data.json');
-        globalData = await res.json();
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Táctico BSC SP6 Tecnologias 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            /* Se aplica el fondo pared.jpg con una capa oscura para legibilidad */
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                        url('../pared.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .glass { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10 text-slate-900 font-sans">
+    <div class="max-w-7xl mx-auto">
         
-        // Llenar el selector con los nombres de la Columna F
-        const selector = document.getElementById('kpi-selector');
-        selector.innerHTML = globalData.kpis.map((k, idx) => `
-            <option value="${idx}">${k.nombre}</option>
-        `).join('');
+        <header class="mb-10 flex flex-col md:flex-row justify-between items-center bg-black/40 p-8 rounded-[2rem] border border-white/10 shadow-2xl">
+            <div>
+                <h1 class="text-white text-3xl font-black uppercase tracking-tighter italic">Dashboard Táctico BSC</h1>
+                <p class="text-red-500 font-bold text-xl tracking-wide">SP6 Tecnologías 2026</p>
+            </div>
+            <div class="text-right mt-4 md:mt-0">
+                <p id="time" class="text-white/60 font-mono text-xs bg-white/5 px-4 py-2 rounded-lg border border-white/5"></p>
+            </div>
+        </header>
 
-        selector.addEventListener('change', (e) => updateChart(e.target.value));
-        
-        // Cargar el primer KPI por defecto
-        updateChart(0);
-    }
+        <div class="glass p-8 rounded-[2.5rem] shadow-2xl mb-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-8 bg-red-600 rounded-full"></div>
+                    <h2 class="text-2xl font-black text-slate-800 uppercase italic">Análisis de Tendencia</h2>
+                </div>
+                <select id="kpi-selector" class="bg-slate-100 border-2 border-slate-200 p-4 rounded-2xl font-bold text-red-600 w-full md:w-[32rem] focus:ring-4 ring-red-500/20 transition-all cursor-pointer shadow-sm">
+                    <option>Cargando KPIs...</option>
+                </select>
+            </div>
+            
+            <div class="h-[350px] w-full">
+                <canvas id="main-chart"></canvas>
+            </div>
+        </div>
 
-    function updateChart(idx) {
-        const kpi = globalData.kpis[idx];
-        if (mainChart) mainChart.destroy();
-        
-        const ctx = document.getElementById('main-chart').getContext('2d');
-        mainChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: globalData.meses,
-                datasets: [{
-                    label: 'Tendencia Mensual',
-                    data: kpi.trend,
-                    backgroundColor: 'rgba(220, 38, 38, 0.8)', // Rojo SP6
-                    borderRadius: 8
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    y: { beginAtZero: true, max: 100 }
-                },
-                plugins: {
-                    legend: { display: false }
+        <div id="kpi-sections-container" class="space-y-12">
+            </div>
+
+    </div>
+
+    <script>
+        let globalData, mainChart;
+
+        async function init() {
+            try {
+                const res = await fetch('data.json');
+                if (!res.ok) throw new Error("No se pudo cargar data.json");
+                
+                globalData = await res.json();
+                
+                // Actualizar timestamp
+                document.getElementById('time').innerText = `Última Sincronización: ${globalData.lastUpdate}`;
+
+                // Configurar el Selector con los KPIs (Columna F)
+                const selector = document.getElementById('kpi-selector');
+                if (globalData.kpis && globalData.kpis.length > 0) {
+                    selector.innerHTML = globalData.kpis.map((k, idx) => `
+                        <option value="${idx}">${k.nombre}</option>
+                    `).join('');
+
+                    selector.addEventListener('change', (e) => updateChart(e.target.value));
+                    
+                    // Inicializar con el primer KPI (F2)
+                    updateChart(0);
                 }
+            } catch (err) {
+                console.error("Error en Dashboard:", err);
             }
-        });
-    }
-    init();
-</script>
+        }
+
+        function updateChart(idx) {
+            const kpi = globalData.kpis[idx];
+            if (!kpi) return;
+
+            if (mainChart) mainChart.destroy();
+            
+            const ctx = document.getElementById('main-chart').getContext('2d');
+            
+            // Creamos el gráfico con los datos de tendencia (H:S)
+            mainChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: globalData.meses, // H1:S1
+                    datasets: [{
+                        label: 'Nota Mensual %',
+                        data: kpi.trend, // H:S de la fila correspondiente
+                        backgroundColor: '#dc2626',
+                        hoverBackgroundColor: '#991b1b',
+                        borderRadius: 10,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1e293b',
+                            titleFont: { size: 14, weight: 'bold' },
+                            padding: 12,
+                            callbacks: {
+                                label: (context) => ` Nota: ${context.raw}%`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true, 
+                            max: 100,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { weight: 'bold' } }
+                        },
+                        x: { 
+                            grid: { display: false },
+                            ticks: { font: { weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        }
+
+        init();
+    </script>
+</body>
+</html>
