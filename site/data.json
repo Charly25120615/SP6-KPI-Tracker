@@ -1,9 +1,9 @@
 {
-  "lastUpdate": "4/2/2026, 9:51:44 a. m.",
+  "lastUpdate": "4/2/2026, 10:58:28 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
-      "nota": 39
+      "nota": 54
     },
     {
       "categoria": "2. Cliente",
@@ -11,11 +11,11 @@
     },
     {
       "categoria": "3. Procesos",
-      "nota": 53
+      "nota": 87
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nota": 76
+      "nota": 96
     }
   ],
   "kpis": [
@@ -83,7 +83,7 @@
       "categoria": "1. Financiero",
       "nombre": "Ventas nuevas mensuales",
       "meta": ">= 4M",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "2. Cliente",
@@ -167,7 +167,7 @@
       "categoria": "3. Procesos",
       "nombre": "Auditar todos los inventarios stocks de los tecnicos",
       "meta": "1",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "3. Procesos",
@@ -185,13 +185,13 @@
       "categoria": "3. Procesos",
       "nombre": "Reducir al menos 1% la facturación a los proveedores por mes (mantener 3 cotizaciones por compra)",
       "meta": ">=1%",
-      "nota": 0
+      "nota": 90
     },
     {
       "categoria": "3. Procesos",
       "nombre": "Reporteria Inventario Leasing",
       "meta": "1",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "3. Procesos",
@@ -245,7 +245,7 @@
       "categoria": "3. Procesos",
       "nombre": "Rotación de inventario en XX",
       "meta": "50%",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
@@ -269,7 +269,7 @@
       "categoria": "4. Aprendizaje & Crecimiento",
       "nombre": "Colocación de prestamos",
       "meta": ">=200,000",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
@@ -281,7 +281,7 @@
   "lideres": [
     {
       "nombre": "Aksana Martínez",
-      "nota": 54
+      "nota": 74
     },
     {
       "nombre": "Allan Zamora",
@@ -289,7 +289,7 @@
     },
     {
       "nombre": "Brenda Guzmán",
-      "nota": 80
+      "nota": 97
     },
     {
       "nombre": "Bryan Oporta",
@@ -305,7 +305,7 @@
     },
     {
       "nombre": "Henry Sánchez",
-      "nota": 28
+      "nota": 93
     },
     {
       "nombre": "Sirley Montero",
@@ -317,7 +317,7 @@
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 70
+      "nota": 82
     }
   ]
 }
