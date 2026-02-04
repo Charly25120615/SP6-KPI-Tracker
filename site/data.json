@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "3/2/2026, 11:01:45 p. m.",
+  "lastUpdate": "3/2/2026, 11:23:12 p. m.",
   "meses": [
     "Enero",
     "Febrero",
@@ -17,19 +17,19 @@
   "bscData": [
     {
       "categoria": "1. Financiero",
-      "nota": 25
+      "nota": 84
     },
     {
       "categoria": "2. Cliente",
-      "nota": 27
+      "nota": 91
     },
     {
       "categoria": "3. Procesos",
-      "nota": 19
+      "nota": 96
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nota": 20
+      "nota": 100
     }
   ],
   "kpis": [
