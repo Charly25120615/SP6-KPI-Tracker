@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "4/2/2026, 1:06:42 a. m.",
+  "lastUpdate": "4/2/2026, 1:15:06 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -21,11 +21,11 @@
   "kpis": [
     {
       "categoria": "1. Financiero",
-      "nombre": "Aksana",
-      "meta": "Ventas de proyectos automatización mensual",
-      "nota": 15,
+      "nombre": "Ventas de proyectos automatización mensual",
+      "meta": "1",
+      "nota": 0,
       "trend": [
-        1,
+        0,
         0,
         0,
         0,
@@ -41,11 +41,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Aksana",
-      "meta": "Ventas nuevas mensuales",
-      "nota": 15,
+      "nombre": "Ventas nuevas mensuales",
+      "meta": ">= 4M",
+      "nota": 100,
       "trend": [
-        0,
+        5,
         5,
         5,
         5,
@@ -61,11 +61,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Brenda",
-      "meta": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
-      "nota": 10,
+      "nombre": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
+      "meta": "<=2%",
+      "nota": 100,
       "trend": [
-        0,
+        3,
         3,
         3,
         3,
@@ -81,12 +81,12 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Brenda",
-      "meta": "Índice de rotación de cuentas por cobrar",
-      "nota": 30,
+      "nombre": "Índice de rotación de cuentas por cobrar",
+      "meta": ">=12,5",
+      "nota": 100,
       "trend": [
-        0,
-        5,
+        14,
+        14,
         14,
         14,
         14,
@@ -101,11 +101,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Brenda",
-      "meta": "Proyecciones de cobros",
-      "nota": 10,
+      "nombre": "Proyecciones de cobros",
+      "meta": ">=1",
+      "nota": 100,
       "trend": [
-        0,
+        2,
         2,
         2,
         2,
@@ -121,11 +121,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Brenda",
-      "meta": "Tasa de Cobra",
-      "nota": 5,
+      "nombre": "Tasa de Cobra",
+      "meta": "80%",
+      "nota": 80,
       "trend": [
-        80,
+        75,
         75,
         75,
         75,
@@ -141,11 +141,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Sirley Montero",
-      "meta": "Gastos mensuales",
-      "nota": 5,
+      "nombre": "Gastos mensuales",
+      "meta": "<=1%",
+      "nota": 100,
       "trend": [
-        0,
+        1,
         1,
         1,
         1,
@@ -161,11 +161,11 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Sirley Montero",
-      "meta": "EBITDA",
-      "nota": 5,
+      "nombre": "EBITDA",
+      "meta": ">10%",
+      "nota": 100,
       "trend": [
-        0,
+        9,
         9,
         9,
         9,
@@ -181,29 +181,9 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Sirley Montero",
-      "meta": "Solvencia a corto plazo",
-      "nota": 5,
-      "trend": [
-        0,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Sirley Montero",
-      "meta": "Precisión presupuestaria",
-      "nota": 15,
+      "nombre": "Solvencia a corto plazo",
+      "meta": ">1.5",
+      "nota": 100,
       "trend": [
         1,
         1,
@@ -221,11 +201,31 @@
     },
     {
       "categoria": "1. Financiero",
-      "nombre": "Sirley Montero",
-      "meta": "Riesgo financiero",
-      "nota": 5,
+      "nombre": "Precisión presupuestaria",
+      "meta": "1",
+      "nota": 100,
       "trend": [
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Riesgo financiero",
+      "meta": "< 50% del activo",
+      "nota": 100,
+      "trend": [
+        40,
         40,
         40,
         40,
@@ -241,11 +241,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Aksana",
-      "meta": "Cantidad de líneas de negocio 4 mensuales",
-      "nota": 5,
+      "nombre": "Cantidad de líneas de negocio 4 mensuales",
+      "meta": "50",
+      "nota": 100,
       "trend": [
-        50,
+        4,
         4,
         4,
         4,
@@ -261,11 +261,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Allan Zamora",
-      "meta": "Al menos 4 innovaciones mensuales",
-      "nota": 5,
+      "nombre": "Al menos 4 innovaciones mensuales",
+      "meta": "50.00",
+      "nota": 100,
       "trend": [
-        50,
+        4,
         4,
         4,
         4,
@@ -281,11 +281,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Allan Zamora",
-      "meta": "Tiempo de Cotización de proyectos (días)",
-      "nota": 5,
+      "nombre": "Tiempo de Cotización de proyectos (días)",
+      "meta": "<= 15",
+      "nota": 100,
       "trend": [
-        0,
+        4,
         4,
         4,
         4,
@@ -301,11 +301,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Allan Zamora",
-      "meta": "Net promote Score",
-      "nota": 15,
+      "nombre": "Net promote Score",
+      "meta": ">= 60",
+      "nota": 70,
       "trend": [
-        0,
+        70,
         70,
         70,
         70,
@@ -321,71 +321,71 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Allan Zamora",
-      "meta": "% Cumplimiento (Alcance",
-      "nota": 30,
+      "nombre": "% Cumplimiento (Alcance, Costo y Cronograma) en los Proyectos (%)",
+      "meta": "90%",
+      "nota": 100,
       "trend": [
-        0,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "Cantidad de BST de TI atendidas en menos de 8 días (Altas)",
+      "meta": "80%",
+      "nota": 100,
+      "trend": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "Net promote Score",
+      "meta": ">= 60",
+      "nota": 100,
+      "trend": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ]
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
+      "meta": "80%",
+      "nota": 100,
+      "trend": [
         90,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100
-      ]
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "Bryan Oporta",
-      "meta": "Cantidad de BST de TI atendidas en menos de 8 días (Altas)",
-      "nota": 5,
-      "trend": [
-        80,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100,
-        100
-      ]
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "Bryan Oporta",
-      "meta": "Net promote Score",
-      "nota": 5,
-      "trend": [
-        0,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70,
-        70
-      ]
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "Jonathan Solera",
-      "meta": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
-      "nota": 5,
-      "trend": [
-        80,
         90,
         90,
         90,
@@ -401,11 +401,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Jonathan Solera",
-      "meta": "Net promote Score",
-      "nota": 15,
+      "nombre": "Net promote Score",
+      "meta": ">= 60",
+      "nota": 90,
       "trend": [
-        0,
+        60,
         60,
         60,
         60,
@@ -421,11 +421,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Jonathan Solera",
-      "meta": "Cumplir con los mantenimientos programados mensual",
-      "nota": 5,
+      "nombre": "Cumplir con los mantenimientos programados mensual",
+      "meta": ">= 80%",
+      "nota": 100,
       "trend": [
-        0,
+        90,
         90,
         90,
         90,
@@ -441,11 +441,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Michelle Quesada",
-      "meta": "Cantidad de salidas de clientes",
-      "nota": 10,
+      "nombre": "Cantidad de salidas de clientes",
+      "meta": "<=2%",
+      "nota": 100,
       "trend": [
-        0,
+        4,
         4,
         4,
         4,
@@ -461,11 +461,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Michelle Quesada",
-      "meta": "Net promote Score: Alarmas corporativas y Automatizaciones",
-      "nota": 10,
+      "nombre": "Net promote Score: Alarmas corporativas y Automatizaciones",
+      "meta": ">= 60",
+      "nota": 70,
       "trend": [
-        0,
+        70,
         70,
         70,
         70,
@@ -481,11 +481,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Aksana",
-      "meta": "Generar al menos 4 pautas semanales",
-      "nota": 5,
+      "nombre": "Generar al menos 4 pautas semanales",
+      "meta": "48",
+      "nota": 100,
       "trend": [
-        48,
+        4,
         4,
         4,
         4,
@@ -781,9 +781,9 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Brenda",
-      "meta": "Colocación de prestamos",
-      "nota": 0,
+      "nombre": "Colocación de prestamos",
+      "meta": ">=200,000",
+      "nota": 100,
       "trend": [
         0,
         0,
@@ -801,12 +801,12 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Monitoreo",
-      "meta": "Allan Zamora",
-      "nota": 20,
+      "nombre": "Al menos 1 capacitación al mes",
+      "meta": "12.00",
+      "nota": 100,
       "trend": [
-        0,
-        12,
+        1,
+        1,
         1,
         1,
         1,
@@ -821,9 +821,9 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Michelle Quesada",
-      "meta": "Medir el nivel neto que el empleado promueve el trabajo",
-      "nota": 20,
+      "nombre": "Medir el nivel neto que el empleado promueve el trabajo",
+      "meta": "70%",
+      "nota": 100,
       "trend": [
         70,
         70,
@@ -841,11 +841,11 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Monitoreo",
-      "meta": "Michelle Quesada",
-      "nota": 20,
+      "nombre": "Al menos 1 capacitación al mes",
+      "meta": "1.00",
+      "nota": 100,
       "trend": [
-        0,
+        1,
         1,
         1,
         1,
