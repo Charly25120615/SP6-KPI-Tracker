@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "4/2/2026, 2:27:40 a. m.",
+  "lastUpdate": "4/2/2026, 2:35:08 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -21,6 +21,60 @@
   "kpis": [
     {
       "categoria": "1. Financiero",
+      "nombre": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
+      "meta": "<=2%",
+      "nota": 100
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "EBITDA",
+      "meta": ">10%",
+      "nota": 0
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Gastos mensuales",
+      "meta": "<=1%",
+      "nota": 0
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Índice de rotación de cuentas por cobrar",
+      "meta": ">=12,5",
+      "nota": 100
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Precisión presupuestaria",
+      "meta": "1",
+      "nota": 0
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Proyecciones de cobros",
+      "meta": ">=1",
+      "nota": 100
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Riesgo financiero",
+      "meta": "< 50% del activo",
+      "nota": 100
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Solvencia a corto plazo",
+      "meta": ">1.5",
+      "nota": 0
+    },
+    {
+      "categoria": "1. Financiero",
+      "nombre": "Tasa de Cobra",
+      "meta": "80%",
+      "nota": 80
+    },
+    {
+      "categoria": "1. Financiero",
       "nombre": "Ventas de proyectos automatización mensual",
       "meta": "1",
       "nota": 0
@@ -32,63 +86,9 @@
       "nota": 0
     },
     {
-      "categoria": "1. Financiero",
-      "nombre": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
-      "meta": "<=2%",
-      "nota": 100
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Índice de rotación de cuentas por cobrar",
-      "meta": ">=12,5",
-      "nota": 100
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Proyecciones de cobros",
-      "meta": ">=1",
-      "nota": 100
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Tasa de Cobra",
-      "meta": "80%",
-      "nota": 80
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Gastos mensuales",
-      "meta": "<=1%",
-      "nota": 0
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "EBITDA",
-      "meta": ">10%",
-      "nota": 0
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Solvencia a corto plazo",
-      "meta": ">1.5",
-      "nota": 0
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Precisión presupuestaria",
-      "meta": "1",
-      "nota": 0
-    },
-    {
-      "categoria": "1. Financiero",
-      "nombre": "Riesgo financiero",
-      "meta": "< 50% del activo",
-      "nota": 100
-    },
-    {
       "categoria": "2. Cliente",
-      "nombre": "Cantidad de líneas de negocio 4 mensuales",
-      "meta": "50",
+      "nombre": "% Cumplimiento (Alcance, Costo y Cronograma) en los Proyectos (%)",
+      "meta": "90%",
       "nota": 100
     },
     {
@@ -99,20 +99,8 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Tiempo de Cotización de proyectos (días)",
-      "meta": "<= 15",
-      "nota": 100
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "NPS - Proyectos",
-      "meta": ">= 60",
-      "nota": 100
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "% Cumplimiento (Alcance, Costo y Cronograma) en los Proyectos (%)",
-      "meta": "90%",
+      "nombre": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
+      "meta": "80%",
       "nota": 100
     },
     {
@@ -123,20 +111,14 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "NPS - Boletas TI",
-      "meta": ">= 60",
+      "nombre": "Cantidad de líneas de negocio 4 mensuales",
+      "meta": "50",
       "nota": 100
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
-      "meta": "80%",
-      "nota": 100
-    },
-    {
-      "categoria": "2. Cliente",
-      "nombre": "NPS - Boletas",
-      "meta": ">= 60",
+      "nombre": "Cantidad de salidas de clientes",
+      "meta": "<=2%",
       "nota": 100
     },
     {
@@ -147,8 +129,20 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Cantidad de salidas de clientes",
-      "meta": "<=2%",
+      "nombre": "Generar al menos 4 pautas semanales",
+      "meta": "48",
+      "nota": 100
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "NPS - Boletas",
+      "meta": ">= 60",
+      "nota": 100
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "NPS - Boletas TI",
+      "meta": ">= 60",
       "nota": 100
     },
     {
@@ -159,39 +153,33 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Generar al menos 4 pautas semanales",
-      "meta": "48",
+      "nombre": "NPS - Proyectos",
+      "meta": ">= 60",
+      "nota": 100
+    },
+    {
+      "categoria": "2. Cliente",
+      "nombre": "Tiempo de Cotización de proyectos (días)",
+      "meta": "<= 15",
       "nota": 100
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - Comercial",
-      "meta": "90%",
-      "nota": 70
-    },
-    {
-      "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - Proyectos",
-      "meta": "90%",
-      "nota": 80
-    },
-    {
-      "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - Auxiliar Conta",
-      "meta": "90%",
-      "nota": 100
-    },
-    {
-      "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - TI",
-      "meta": "90%",
-      "nota": 70
-    },
-    {
-      "categoria": "3. Procesos",
-      "nombre": "Rotación de inventario en XX",
-      "meta": "50%",
+      "nombre": "Auditar todos los inventarios stocks de los tecnicos",
+      "meta": "1",
       "nota": 0
+    },
+    {
+      "categoria": "3. Procesos",
+      "nombre": "Control del equipo Dañado",
+      "meta": "<5%",
+      "nota": 100
+    },
+    {
+      "categoria": "3. Procesos",
+      "nombre": "Proyecto trimestral de eficientizar la empresa",
+      "meta": ">=1",
+      "nota": 80
     },
     {
       "categoria": "3. Procesos",
@@ -207,13 +195,19 @@
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Auditar todos los inventarios stocks de los tecnicos",
-      "meta": "1",
-      "nota": 0
+      "nombre": "Resolución de Blocker - Auxiliar Conta",
+      "meta": "90%",
+      "nota": 100
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - Proveeduria",
+      "nombre": "Resolución de Blocker - Comercial",
+      "meta": "90%",
+      "nota": 70
+    },
+    {
+      "categoria": "3. Procesos",
+      "nombre": "Resolución de Blocker - Finanzas",
       "meta": "90%",
       "nota": 70
     },
@@ -231,20 +225,44 @@
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Resolución de Blocker - Finanzas",
+      "nombre": "Resolución de Blocker - Proveeduria",
       "meta": "90%",
       "nota": 70
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Proyecto trimestral de eficientizar la empresa",
-      "meta": ">=1",
+      "nombre": "Resolución de Blocker - Proyectos",
+      "meta": "90%",
       "nota": 80
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Control del equipo Dañado",
-      "meta": "<5%",
+      "nombre": "Resolución de Blocker - TI",
+      "meta": "90%",
+      "nota": 70
+    },
+    {
+      "categoria": "3. Procesos",
+      "nombre": "Rotación de inventario en XX",
+      "meta": "50%",
+      "nota": 0
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "nombre": "1 capacitación al mes - Habilidades",
+      "meta": "1.00",
+      "nota": 100
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "nombre": "1 capacitación al mes - Monitoreo",
+      "meta": "1.00",
+      "nota": 100
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "nombre": "1 capacitación al mes - Técnica",
+      "meta": "12.00",
       "nota": 100
     },
     {
@@ -255,27 +273,9 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "1 capacitación al mes - Técnica",
-      "meta": "12.00",
-      "nota": 100
-    },
-    {
-      "categoria": "4. Aprendizaje & Crecimiento",
       "nombre": "eNPS - Monitoreo",
       "meta": "70%",
       "nota": 80
-    },
-    {
-      "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "1 capacitación al mes - Monitoreo",
-      "meta": "1.00",
-      "nota": 100
-    },
-    {
-      "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "1 capacitación al mes - Habilidades",
-      "meta": "1.00",
-      "nota": 100
     }
   ],
   "lideres": [
