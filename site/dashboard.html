@@ -58,22 +58,24 @@
                 const d = await res.json();
                 document.getElementById('time').innerText = 'Actualizado: ' + d.lastUpdate;
 
-                // --- SECCIÓN 1: BSC CARDS ---
-                const rubros = [...new Set(d.items.map(i => i.rubro))];
+                // --- SECCIÓN 1: BSC CARDS (Ahora desde bscData) ---
                 const bscContainer = document.getElementById('bsc');
-                rubros.forEach(r => {
-                    const group = d.items.filter(i => i.rubro === r);
-                    const avg = group.reduce((a, b) => a + b.notaY, 0) / group.length;
-                    const color = avg >= 90 ? 'bg-emerald-500' : avg >= 75 ? 'bg-amber-500' : 'bg-rose-500';
-                    bscContainer.innerHTML += `
-                        <div class="${color} p-8 rounded-[2rem] text-white shadow-lg transform hover:scale-105 transition-all">
-                            <p class="text-[10px] uppercase font-black opacity-70 tracking-widest mb-2">${r}</p>
-                            <p class="text-4xl font-black">${avg.toFixed(1)}%</p>
-                            <div class="w-full bg-white/20 h-1 rounded-full mt-4">
-                                <div class="bg-white h-1 rounded-full" style="width: ${avg}%"></div>
-                            </div>
-                        </div>`;
-                });
+                bscContainer.innerHTML = ''; 
+                
+                if (d.bscData) {
+                    d.bscData.forEach(item => {
+                        // Lógica de colores basada en la nota directa del Excel
+                        const color = item.nota >= 90 ? 'bg-emerald-500' : item.nota >= 75 ? 'bg-amber-500' : 'bg-rose-500';
+                        bscContainer.innerHTML += `
+                            <div class="${color} p-8 rounded-[2rem] text-white shadow-lg transform hover:scale-105 transition-all">
+                                <p class="text-[10px] uppercase font-black opacity-70 tracking-widest mb-2">${item.categoria}</p>
+                                <p class="text-4xl font-black">${item.nota.toFixed(1)}%</p>
+                                <div class="w-full bg-white/20 h-1 rounded-full mt-4">
+                                    <div class="bg-white h-1 rounded-full" style="width: ${item.nota}%"></div>
+                                </div>
+                            </div>`;
+                    });
+                }
 
                 // --- SECCIÓN 2: LISTADO Y CHART ---
                 const ctx = document.getElementById('chart').getContext('2d');
