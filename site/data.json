@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "3/2/2026, 10:47:28 p. m.",
+  "lastUpdate": "3/2/2026, 11:01:45 p. m.",
   "meses": [
     "Enero",
     "Febrero",
@@ -35,7 +35,7 @@
   "kpis": [
     {
       "categoria": "1. Financiero",
-      "kpi": "Aksana",
+      "nombre": "Aksana",
       "meta": "Ventas de proyectos automatización mensual",
       "nota": 15,
       "trend": [
@@ -55,7 +55,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Aksana",
+      "nombre": "Aksana",
       "meta": "Ventas nuevas mensuales",
       "nota": 15,
       "trend": [
@@ -75,7 +75,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Brenda",
+      "nombre": "Brenda",
       "meta": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
       "nota": 10,
       "trend": [
@@ -95,7 +95,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Brenda",
+      "nombre": "Brenda",
       "meta": "Índice de rotación de cuentas por cobrar",
       "nota": 30,
       "trend": [
@@ -115,7 +115,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Brenda",
+      "nombre": "Brenda",
       "meta": "Proyecciones de cobros",
       "nota": 10,
       "trend": [
@@ -135,7 +135,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Brenda",
+      "nombre": "Brenda",
       "meta": "Tasa de Cobra",
       "nota": 5,
       "trend": [
@@ -155,7 +155,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Sirley Montero",
+      "nombre": "Sirley Montero",
       "meta": "Gastos mensuales",
       "nota": 5,
       "trend": [
@@ -175,7 +175,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Sirley Montero",
+      "nombre": "Sirley Montero",
       "meta": "EBITDA",
       "nota": 5,
       "trend": [
@@ -195,7 +195,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Sirley Montero",
+      "nombre": "Sirley Montero",
       "meta": "Solvencia a corto plazo",
       "nota": 5,
       "trend": [
@@ -215,7 +215,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Sirley Montero",
+      "nombre": "Sirley Montero",
       "meta": "Precisión presupuestaria",
       "nota": 15,
       "trend": [
@@ -235,7 +235,7 @@
     },
     {
       "categoria": "1. Financiero",
-      "kpi": "Sirley Montero",
+      "nombre": "Sirley Montero",
       "meta": "Riesgo financiero",
       "nota": 5,
       "trend": [
@@ -255,7 +255,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Aksana",
+      "nombre": "Aksana",
       "meta": "Cantidad de líneas de negocio 4 mensuales",
       "nota": 5,
       "trend": [
@@ -275,7 +275,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Allan Zamora",
+      "nombre": "Allan Zamora",
       "meta": "Al menos 4 innovaciones mensuales",
       "nota": 5,
       "trend": [
@@ -295,7 +295,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Allan Zamora",
+      "nombre": "Allan Zamora",
       "meta": "Tiempo de Cotización de proyectos (días)",
       "nota": 5,
       "trend": [
@@ -315,7 +315,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Allan Zamora",
+      "nombre": "Allan Zamora",
       "meta": "Net promote Score",
       "nota": 15,
       "trend": [
@@ -335,7 +335,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Allan Zamora",
+      "nombre": "Allan Zamora",
       "meta": "% Cumplimiento (Alcance",
       "nota": 30,
       "trend": [
@@ -355,7 +355,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Bryan Oporta",
+      "nombre": "Bryan Oporta",
       "meta": "Cantidad de BST de TI atendidas en menos de 8 días (Altas)",
       "nota": 5,
       "trend": [
@@ -375,7 +375,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Bryan Oporta",
+      "nombre": "Bryan Oporta",
       "meta": "Net promote Score",
       "nota": 5,
       "trend": [
@@ -395,7 +395,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Jonathan Solera",
+      "nombre": "Jonathan Solera",
       "meta": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
       "nota": 5,
       "trend": [
@@ -415,7 +415,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Jonathan Solera",
+      "nombre": "Jonathan Solera",
       "meta": "Net promote Score",
       "nota": 15,
       "trend": [
@@ -435,7 +435,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Jonathan Solera",
+      "nombre": "Jonathan Solera",
       "meta": "Cumplir con los mantenimientos programados mensual",
       "nota": 5,
       "trend": [
@@ -455,7 +455,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Michelle Quesada",
+      "nombre": "Michelle Quesada",
       "meta": "Cantidad de salidas de clientes",
       "nota": 10,
       "trend": [
@@ -475,7 +475,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Michelle Quesada",
+      "nombre": "Michelle Quesada",
       "meta": "Net promote Score: Alarmas corporativas y Automatizaciones",
       "nota": 10,
       "trend": [
@@ -495,7 +495,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "kpi": "Aksana",
+      "nombre": "Aksana",
       "meta": "Generar al menos 4 pautas semanales",
       "nota": 5,
       "trend": [
@@ -515,7 +515,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -535,7 +535,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -555,7 +555,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -575,7 +575,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -595,7 +595,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Rotación de inventario en XX",
+      "nombre": "Rotación de inventario en XX",
       "meta": "50%",
       "nota": 100,
       "trend": [
@@ -615,7 +615,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Reducir al menos 1% la facturación a los proveedores por mes (mantener 3 cotizaciones por compra)",
+      "nombre": "Reducir al menos 1% la facturación a los proveedores por mes (mantener 3 cotizaciones por compra)",
       "meta": ">=1%",
       "nota": 100,
       "trend": [
@@ -635,7 +635,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumple o No",
+      "nombre": "Cumple o No",
       "meta": "1",
       "nota": 100,
       "trend": [
@@ -655,7 +655,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Auditar todos los inventarios stocks de los tecnicos",
+      "nombre": "Auditar todos los inventarios stocks de los tecnicos",
       "meta": "1",
       "nota": 100,
       "trend": [
@@ -675,7 +675,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -695,7 +695,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -715,7 +715,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -735,7 +735,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Cumplan la fecha de vencimiento",
+      "nombre": "Cumplan la fecha de vencimiento",
       "meta": "90%",
       "nota": 100,
       "trend": [
@@ -755,7 +755,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "al menos 1 proyecto trimestral de eficientizar la empresa",
+      "nombre": "al menos 1 proyecto trimestral de eficientizar la empresa",
       "meta": ">=1",
       "nota": 80,
       "trend": [
@@ -775,7 +775,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "kpi": "Control del equipo Dañado",
+      "nombre": "Control del equipo Dañado",
       "meta": "<5%",
       "nota": 100,
       "trend": [
@@ -795,7 +795,7 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "kpi": "Brenda",
+      "nombre": "Brenda",
       "meta": "Colocación de prestamos",
       "nota": 0,
       "trend": [
@@ -815,7 +815,7 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "kpi": "Monitoreo",
+      "nombre": "Monitoreo",
       "meta": "Allan Zamora",
       "nota": 20,
       "trend": [
@@ -835,7 +835,7 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "kpi": "Michelle Quesada",
+      "nombre": "Michelle Quesada",
       "meta": "Medir el nivel neto que el empleado promueve el trabajo",
       "nota": 20,
       "trend": [
@@ -855,7 +855,7 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "kpi": "Monitoreo",
+      "nombre": "Monitoreo",
       "meta": "Michelle Quesada",
       "nota": 20,
       "trend": [
@@ -875,7 +875,7 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "kpi": "Al menos 1 capacitación al mes",
+      "nombre": "Al menos 1 capacitación al mes",
       "meta": "12.00",
       "nota": 100,
       "trend": [
@@ -895,14 +895,6 @@
     }
   ],
   "lideres": [
-    {
-      "nombre": "Al menos 1 capacitación al mes",
-      "nota": 12
-    },
-    {
-      "nombre": "Responsible",
-      "nota": 0
-    },
     {
       "nombre": "Aksana",
       "nota": 80
