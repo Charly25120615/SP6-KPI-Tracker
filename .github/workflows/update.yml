@@ -1,8 +1,8 @@
 name: Actualizar Datos KPI
 on:
   schedule:
-    - cron: '0 0 * * *' # Se ejecuta cada medianoche
-  workflow_dispatch: # Esto activa el botón para ejecutarlo manualmente
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Instalar dependencias
-        run: npm install axios csv-parse
+      - name: Instalar dependencias necesarias
+        run: npm install axios csv-parse  # <-- Esto es lo que faltaba
 
       - name: Ejecutar procesador de datos
         run: node scripts/build.js
