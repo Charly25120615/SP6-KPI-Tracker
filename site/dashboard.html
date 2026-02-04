@@ -1,90 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard BSC 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)), url('../pared.jpg'); background-size: cover; background-attachment: fixed; }
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-    </style>
-</head>
-<body class="p-6 md:p-12 text-slate-800 font-sans">
-    <div class="max-w-7xl mx-auto">
-        <header class="mb-10 flex justify-between items-end border-b border-white/10 pb-6">
-            <div>
-                <h1 class="text-white text-4xl font-black italic uppercase tracking-tighter">Dashboard Táctico</h1>
-                <p class="text-red-500 font-bold">SP6 TECNOLOGÍAS 2026</p>
+<script>
+    const getCol = (n) => n >= 90 ? 'text-green-600' : n >= 80 ? 'text-yellow-600' : 'text-red-600';
+    const getBg = (n) => n >= 90 ? 'bg-green-500' : n >= 80 ? 'bg-yellow-500' : 'bg-red-500';
+    const getBorder = (n) => n >= 90 ? 'border-green-500' : n >= 80 ? 'border-yellow-500' : 'border-red-500';
+
+    async function load() {
+        // Añadimos un timestamp para evitar que el navegador guarde una versión vieja del JSON
+        const res = await fetch('data.json?v=' + Date.now());
+        const data = await res.json();
+        document.getElementById('time').innerText = `Última Sincronización: ${data.lastUpdate}`;
+
+        // 1. Resumen Superior
+        document.getElementById('bsc-container').innerHTML = data.bscData.map(i => `
+            <div class="${getBg(i.nota)} p-6 rounded-2xl text-white shadow-lg">
+                <p class="text-[10px] font-bold uppercase opacity-60">${i.categoria}</p>
+                <p class="text-3xl font-black">${i.nota.toFixed(1)}%</p>
             </div>
-            <p id="time" class="text-white/40 font-mono text-xs"></p>
-        </header>
+        `).join('');
 
-        <div id="bsc-container" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"></div>
-        <div id="kpi-groups" class="space-y-12 mb-12"></div>
-        
-        <h2 class="text-white/50 font-black text-xs uppercase tracking-widest mb-4">Desempeño por Líder</h2>
-        <div id="lideres-container" class="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
-    </div>
+        // 2. Grupos de KPIs
+        const groups = data.kpis.reduce((acc, k) => {
+            acc[k.categoria] = acc[k.categoria] || [];
+            acc[k.categoria].push(k);
+            return acc;
+        }, {});
 
-    <script>
-        const getCol = (n) => n >= 90 ? 'text-green-600' : n >= 80 ? 'text-yellow-600' : 'text-red-600';
-        const getBg = (n) => n >= 90 ? 'bg-green-500' : n >= 80 ? 'bg-yellow-500' : 'bg-red-500';
-        const getBorder = (n) => n >= 90 ? 'border-green-500' : n >= 80 ? 'border-yellow-500' : 'border-red-500';
-
-        async function load() {
-            const res = await fetch('data.json');
-            const data = await res.json();
-            document.getElementById('time').innerText = `Sync: ${data.lastUpdate}`;
-
-            // 1. Resumen
-            document.getElementById('bsc-container').innerHTML = data.bscData.map(i => `
-                <div class="${getBg(i.nota)} p-6 rounded-2xl text-white shadow-lg">
-                    <p class="text-[10px] font-bold uppercase opacity-60">${i.categoria}</p>
-                    <p class="text-3xl font-black">${i.nota.toFixed(1)}%</p>
-                </div>
-            `).join('');
-
-            // 2. Grupos de KPIs
-            const groups = data.kpis.reduce((acc, k) => {
-                acc[k.categoria] = acc[k.categoria] || [];
-                acc[k.categoria].push(k);
-                return acc;
-            }, {});
-
-            document.getElementById('kpi-groups').innerHTML = Object.entries(groups).map(([cat, kpis]) => `
-                <div>
-                    <h3 class="text-white/80 text-lg font-black mb-4 uppercase border-l-4 border-blue-500 pl-3">${cat}</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        ${kpis.map(k => `
-                            <div class="glass p-6 rounded-[2rem] border-b-8 ${getBorder(k.nota)} shadow-xl">
+        document.getElementById('kpi-groups').innerHTML = Object.entries(groups).map(([cat, kpis]) => `
+            <div>
+                <h3 class="text-white/80 text-lg font-black mb-4 uppercase border-l-4 border-blue-500 pl-3">${cat}</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    ${kpis.map(k => `
+                        <div class="glass p-6 rounded-[2rem] border-b-8 ${getBorder(k.nota)} shadow-xl flex flex-col justify-between h-full">
+                            <div>
                                 <p class="text-[10px] font-bold text-slate-400 uppercase mb-2">${k.categoria}</p>
-                                <p class="font-bold text-slate-800 text-lg leading-tight h-12 mb-6">${k.nombre}</p>
-                                <div class="flex justify-between items-end">
-                                    <div>
-                                        <p class="text-[10px] font-bold text-slate-400">NOTA</p>
-                                        <p class="text-4xl font-black ${getCol(k.nota)}">${k.nota}%</p>
-                                    </div>
-                                    <div class="text-right">
-                                        <p class="text-[10px] font-bold text-slate-400">META ANUAL</p>
-                                        <p class="font-black text-slate-600">${k.meta}</p>
-                                    </div>
+                                <p class="font-bold text-slate-800 text-base leading-tight min-h-[3rem] mb-4">${k.nombre}</p>
+                            </div>
+                            
+                            <div class="flex justify-between items-end mt-auto">
+                                <div>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Logro</p>
+                                    <p class="text-4xl font-black ${getCol(k.nota)}">${k.nota}%</p>
+                                </div>
+                                <div class="text-right max-w-[50%]">
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Meta (Col. G)</p>
+                                    <p class="font-black text-slate-600 text-xs break-words">${k.meta}</p>
                                 </div>
                             </div>
-                        `).join('')}
-                    </div>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('');
+            </div>
+        `).join('');
 
-            // 3. Líderes
-            document.getElementById('lideres-container').innerHTML = data.lideres.map(l => `
-                <div class="glass p-4 rounded-xl text-center border-t-4 ${getBorder(l.nota)}">
-                    <p class="text-[10px] font-bold text-slate-400 uppercase">LÍDER</p>
-                    <p class="font-bold text-slate-700 text-sm truncate">${l.nombre}</p>
-                    <p class="text-xl font-black ${getCol(l.nota)}">${l.nota}%</p>
-                </div>
-            `).join('');
-        }
-        load();
-    </script>
-</body>
-</html>
+        // 3. Sección de Líderes
+        document.getElementById('lideres-container').innerHTML = data.lideres.map(l => `
+            <div class="glass p-4 rounded-xl text-center border-t-4 ${getBorder(l.nota)}">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Responsable</p>
+                <p class="font-bold text-slate-700 text-sm truncate">${l.nombre}</p>
+                <p class="text-xl font-black ${getCol(l.nota)}">${l.nota}%</p>
+            </div>
+        `).join('');
+    }
+    load();
+</script>
