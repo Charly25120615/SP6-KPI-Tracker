@@ -1,13 +1,23 @@
 {
-  "lastUpdate": "3/2/2026, 10:24:11 p. m.",
+  "lastUpdate": "3/2/2026, 10:47:28 p. m.",
+  "meses": [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre"
+  ],
   "bscData": [
     {
-      "categoria": "Categoria BSC",
-      "nota": 0
-    },
-    {
       "categoria": "1. Financiero",
-      "nota": 28
+      "nota": 25
     },
     {
       "categoria": "2. Cliente",
@@ -16,18 +26,21 @@
     {
       "categoria": "3. Procesos",
       "nota": 19
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "nota": 20
     }
   ],
-  "items": [
+  "kpis": [
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 15,
-      "notaY": 11,
+      "categoria": "1. Financiero",
+      "kpi": "Aksana",
+      "meta": "Ventas de proyectos automatización mensual",
+      "nota": 15,
       "trend": [
-        0,
         1,
+        0,
         0,
         0,
         0,
@@ -41,14 +54,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 15,
-      "notaY": 15,
+      "categoria": "1. Financiero",
+      "kpi": "Aksana",
+      "meta": "Ventas nuevas mensuales",
+      "nota": 15,
       "trend": [
         0,
-        0,
+        5,
         5,
         5,
         5,
@@ -62,14 +74,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 10,
-      "notaY": 10,
+      "categoria": "1. Financiero",
+      "kpi": "Brenda",
+      "meta": "Cartera de clientes en cuentas por cobrar (reducir cartera a 90 días)",
+      "nota": 10,
       "trend": [
         0,
-        0,
+        3,
         3,
         3,
         3,
@@ -83,15 +94,14 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 30,
-      "notaY": 100,
+      "categoria": "1. Financiero",
+      "kpi": "Brenda",
+      "meta": "Índice de rotación de cuentas por cobrar",
+      "nota": 30,
       "trend": [
         0,
-        0,
         5,
+        14,
         14,
         14,
         14,
@@ -104,14 +114,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 10,
-      "notaY": 10,
+      "categoria": "1. Financiero",
+      "kpi": "Brenda",
+      "meta": "Proyecciones de cobros",
+      "nota": 10,
       "trend": [
         0,
-        0,
+        2,
         2,
         2,
         2,
@@ -125,14 +134,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 5,
-      "notaY": 4,
+      "categoria": "1. Financiero",
+      "kpi": "Brenda",
+      "meta": "Tasa de Cobra",
+      "nota": 5,
       "trend": [
-        0,
         80,
+        75,
         75,
         75,
         75,
@@ -146,14 +154,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Asegurar un crecimiento financiero sostenible mediante ingresos recurrentes",
-      "kpi": "rentabilidad controlada y disciplina en costos.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "1. Financiero",
+      "kpi": "Sirley Montero",
+      "meta": "Gastos mensuales",
+      "nota": 5,
       "trend": [
         0,
-        0,
+        1,
         1,
         1,
         1,
@@ -167,14 +174,13 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Gestionar proactivamente el riesgo financiero para asegurar la estabilidad",
-      "kpi": "liquidez y continuidad operativa de SP6.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "1. Financiero",
+      "kpi": "Sirley Montero",
+      "meta": "EBITDA",
+      "nota": 5,
       "trend": [
         0,
-        0,
+        9,
         9,
         9,
         9,
@@ -188,32 +194,10 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Gestionar proactivamente el riesgo financiero para asegurar la estabilidad",
-      "kpi": "liquidez y continuidad operativa de SP6.",
-      "notaW": 5,
-      "notaY": 5,
-      "trend": [
-        0,
-        0,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    {
-      "rubro": "1. Financiero",
-      "empleado": "Gestionar proactivamente el riesgo financiero para asegurar la estabilidad",
-      "kpi": "liquidez y continuidad operativa de SP6.",
-      "notaW": 15,
-      "notaY": 15,
+      "categoria": "1. Financiero",
+      "kpi": "Sirley Montero",
+      "meta": "Solvencia a corto plazo",
+      "nota": 5,
       "trend": [
         0,
         1,
@@ -230,14 +214,33 @@
       ]
     },
     {
-      "rubro": "1. Financiero",
-      "empleado": "Gestionar proactivamente el riesgo financiero para asegurar la estabilidad",
-      "kpi": "liquidez y continuidad operativa de SP6.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "1. Financiero",
+      "kpi": "Sirley Montero",
+      "meta": "Precisión presupuestaria",
+      "nota": 15,
+      "trend": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "categoria": "1. Financiero",
+      "kpi": "Sirley Montero",
+      "meta": "Riesgo financiero",
+      "nota": 5,
       "trend": [
         0,
-        0,
+        40,
         40,
         40,
         40,
@@ -251,13 +254,11 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Aksana",
+      "meta": "Cantidad de líneas de negocio 4 mensuales",
+      "nota": 5,
       "trend": [
-        0,
         50,
         4,
         4,
@@ -268,17 +269,16 @@
         4,
         4,
         4,
+        4,
         4
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Allan Zamora",
+      "meta": "Al menos 4 innovaciones mensuales",
+      "nota": 5,
       "trend": [
-        0,
         50,
         4,
         4,
@@ -289,39 +289,38 @@
         4,
         4,
         4,
-        4
-      ]
-    },
-    {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
-      "trend": [
-        0,
-        0,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
-        4,
         4,
         4
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 15,
-      "notaY": 11,
+      "categoria": "2. Cliente",
+      "kpi": "Allan Zamora",
+      "meta": "Tiempo de Cotización de proyectos (días)",
+      "nota": 5,
       "trend": [
         0,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "categoria": "2. Cliente",
+      "kpi": "Allan Zamora",
+      "meta": "Net promote Score",
+      "nota": 15,
+      "trend": [
         0,
+        70,
         70,
         70,
         70,
@@ -335,13 +334,11 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 30,
-      "notaY": 100,
+      "categoria": "2. Cliente",
+      "kpi": "Allan Zamora",
+      "meta": "% Cumplimiento (Alcance",
+      "nota": 30,
       "trend": [
-        0,
         0,
         90,
         100,
@@ -352,17 +349,16 @@
         100,
         100,
         100,
+        100,
         100
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Bryan Oporta",
+      "meta": "Cantidad de BST de TI atendidas en menos de 8 días (Altas)",
+      "nota": 5,
       "trend": [
-        0,
         80,
         100,
         100,
@@ -373,18 +369,18 @@
         100,
         100,
         100,
+        100,
         100
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Bryan Oporta",
+      "meta": "Net promote Score",
+      "nota": 5,
       "trend": [
         0,
-        0,
+        70,
         70,
         70,
         70,
@@ -398,14 +394,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Jonathan Solera",
+      "meta": "Cantidad de BST de seguridad atendidas en menos de 8 días (Altas)",
+      "nota": 5,
       "trend": [
-        0,
         80,
+        90,
         90,
         90,
         90,
@@ -419,14 +414,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 15,
-      "notaY": 14,
+      "categoria": "2. Cliente",
+      "kpi": "Jonathan Solera",
+      "meta": "Net promote Score",
+      "nota": 15,
       "trend": [
         0,
-        0,
+        60,
         60,
         60,
         60,
@@ -440,14 +434,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Jonathan Solera",
+      "meta": "Cumplir con los mantenimientos programados mensual",
+      "nota": 5,
       "trend": [
         0,
-        0,
+        90,
         90,
         90,
         90,
@@ -461,14 +454,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 10,
-      "notaY": 10,
+      "categoria": "2. Cliente",
+      "kpi": "Michelle Quesada",
+      "meta": "Cantidad de salidas de clientes",
+      "nota": 10,
       "trend": [
         0,
-        0,
+        4,
         4,
         4,
         4,
@@ -482,14 +474,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 10,
-      "notaY": 7,
+      "categoria": "2. Cliente",
+      "kpi": "Michelle Quesada",
+      "meta": "Net promote Score: Alarmas corporativas y Automatizaciones",
+      "nota": 10,
       "trend": [
         0,
-        0,
+        70,
         70,
         70,
         70,
@@ -503,14 +494,13 @@
       ]
     },
     {
-      "rubro": "2. Cliente",
-      "empleado": "Fortalecer la confianza del cliente mediante un servicio justo",
-      "kpi": "transparente y consistente.",
-      "notaW": 5,
-      "notaY": 5,
+      "categoria": "2. Cliente",
+      "kpi": "Aksana",
+      "meta": "Generar al menos 4 pautas semanales",
+      "nota": 5,
       "trend": [
-        0,
         48,
+        4,
         4,
         4,
         4,
@@ -524,13 +514,12 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Responder blockers en tiempo y forma",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
       "trend": [
-        90,
+        95,
         95,
         95,
         95,
@@ -545,13 +534,12 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Responder blockers en tiempo y forma",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
       "trend": [
-        90,
+        91,
         91,
         91,
         91,
@@ -566,11 +554,10 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Responder blockers en tiempo y forma",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
       "trend": [
         90,
         90,
@@ -587,11 +574,10 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Responder blockers en tiempo y forma",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
       "trend": [
         90,
         90,
@@ -608,14 +594,13 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Índice de rotación de inventario",
-      "notaW": 100,
-      "notaY": 2,
+      "categoria": "3. Procesos",
+      "kpi": "Rotación de inventario en XX",
+      "meta": "50%",
+      "nota": 100,
       "trend": [
         50,
-        50,
+        60,
         60,
         60,
         60,
@@ -629,13 +614,12 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Mejorar los precio costo de los equipos y materiales",
-      "notaW": 100,
-      "notaY": 3,
+      "categoria": "3. Procesos",
+      "kpi": "Reducir al menos 1% la facturación a los proveedores por mes (mantener 3 cotizaciones por compra)",
+      "meta": ">=1%",
+      "nota": 100,
       "trend": [
-        0,
+        5,
         5,
         5,
         5,
@@ -650,11 +634,10 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Generar reporteria mensual de inventarios en leasing",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Cumple o No",
+      "meta": "1",
+      "nota": 100,
       "trend": [
         1,
         1,
@@ -671,11 +654,10 @@
       ]
     },
     {
-      "rubro": "3. Procesos",
-      "empleado": "Automatizar o Mejorar procesos operativos críticos para reducir errores y tiempos de respuesta.",
-      "kpi": "Control de stock de inventario tecnicos",
-      "notaW": 100,
-      "notaY": 1,
+      "categoria": "3. Procesos",
+      "kpi": "Auditar todos los inventarios stocks de los tecnicos",
+      "meta": "1",
+      "nota": 100,
       "trend": [
         1,
         1,
@@ -690,6 +672,276 @@
         1,
         1
       ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
+      "trend": [
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91
+      ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
+      "trend": [
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91
+      ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
+      "trend": [
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91
+      ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "Cumplan la fecha de vencimiento",
+      "meta": "90%",
+      "nota": 100,
+      "trend": [
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91,
+        91
+      ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "al menos 1 proyecto trimestral de eficientizar la empresa",
+      "meta": ">=1",
+      "nota": 80,
+      "trend": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "categoria": "3. Procesos",
+      "kpi": "Control del equipo Dañado",
+      "meta": "<5%",
+      "nota": 100,
+      "trend": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "kpi": "Brenda",
+      "meta": "Colocación de prestamos",
+      "nota": 0,
+      "trend": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "kpi": "Monitoreo",
+      "meta": "Allan Zamora",
+      "nota": 20,
+      "trend": [
+        0,
+        12,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "kpi": "Michelle Quesada",
+      "meta": "Medir el nivel neto que el empleado promueve el trabajo",
+      "nota": 20,
+      "trend": [
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ]
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "kpi": "Monitoreo",
+      "meta": "Michelle Quesada",
+      "nota": 20,
+      "trend": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "categoria": "4. Aprendizaje & Crecimiento",
+      "kpi": "Al menos 1 capacitación al mes",
+      "meta": "12.00",
+      "nota": 100,
+      "trend": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "lideres": [
+    {
+      "nombre": "Al menos 1 capacitación al mes",
+      "nota": 12
+    },
+    {
+      "nombre": "Responsible",
+      "nota": 0
+    },
+    {
+      "nombre": "Aksana",
+      "nota": 80
+    },
+    {
+      "nombre": "Allan Zamora",
+      "nota": 95
+    },
+    {
+      "nombre": "Brenda",
+      "nota": 97
+    },
+    {
+      "nombre": "Bryan Oporta",
+      "nota": 100
+    },
+    {
+      "nombre": "Charlie",
+      "nota": 90
+    },
+    {
+      "nombre": "Michelle Quesada",
+      "nota": 94
+    },
+    {
+      "nombre": "Henry Sánchez",
+      "nota": 100
+    },
+    {
+      "nombre": "Sirley Montero",
+      "nota": 100
+    },
+    {
+      "nombre": "Jonathan Solera",
+      "nota": 98
+    },
+    {
+      "nombre": "Neskeen Ruiz",
+      "nota": 95
     }
   ]
 }
