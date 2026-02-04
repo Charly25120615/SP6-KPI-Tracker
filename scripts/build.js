@@ -1,54 +1,43 @@
-const fs = require('fs');
 const axios = require('axios');
 const { parse } = require('csv-parse/sync');
+const fs = require('fs');
 
-async function process() {
+async function update() {
     try {
-        console.log("📥 Descargando datos desde Google Sheets...");
-        const res = await axios.get('https://docs.google.com/spreadsheets/d/e/2PACX-1vSPotKOx5NYnEXNJKl-9oof0awv1vlzzIw_imGVWQRRnLvArsydB4bfb8PiKZsxCg/pub?output=csv');
-        
-        // Obtenemos todas las filas, incluyendo las vacías para mantener los índices de las celdas exactos
-        const rows = parse(res.data, { skip_empty_lines: false });
-        
-        // --- SECCIÓN 1: EXTRACCIÓN DE TABLA B46:D50 ---
-        // En un CSV, la fila 46 es el índice 45 (empezando desde 0)
-        const bscData = rows.slice(45, 50).map(row => ({
-            categoria: row[1],             // Columna B (Índice 1)
-            nota: parseFloat(row[3]) || 0  // Columna D (Índice 3)
+        // Tu URL de Google Sheets en formato CSV
+        const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRAt2WlR-jN3_e0hP-44o5Xl_D6A8YJ5M60L_8h4S8Q3Z-jA5S0/pub?output=csv';
+        const res = await axios.get(url);
+        const rows = parse(res.data, { skip_empty_lines: true });
+
+        // --- EXTRACCIÓN DE LA SECCIÓN 1 (B46:D50) ---
+        // Ajustamos los índices para las filas 46 a 50 del Excel
+        const bscData = rows.slice(45, 49).map(row => ({
+            categoria: row[1], // Columna B
+            nota: parseFloat(row[3]) || 0 // Columna D (Nota del mes actual)
         }));
 
-        // --- SECCIÓN 2 & 3: EXTRACCIÓN DE KPIs (Filas 2 a 44) ---
-        const kpiMap = new Map();
-        rows.slice(1, 44).forEach(row => {
-            const kpiName = row[5]; // Columna F
-            if (!kpiName) return;
-            
-            const trend = row.slice(7, 19).map(v => parseFloat(v) || 0);
-            if (!kpiMap.has(kpiName)) {
-                kpiMap.set(kpiName, { 
-                    rubro: row[1], 
-                    empleado: row[4], 
-                    kpi: kpiName, 
-                    notaW: parseFloat(row[22]) || 0, 
-                    notaY: parseFloat(row[24]) || 0, 
-                    trend 
-                });
-            }
-        });
+        // --- EXTRACCIÓN DE LOS KPIs (Tabla principal) ---
+        const items = rows.slice(1, 33).map(row => ({
+            rubro: row[1],
+            empleado: row[2],
+            kpi: row[3],
+            notaW: parseFloat(row[22]) || 0,
+            notaY: parseFloat(row[24]) || 0,
+            trend: row.slice(6, 18).map(v => parseFloat(v) || 0)
+        }));
 
-        // --- GENERACIÓN DEL ARCHIVO FINAL ---
-        const data = { 
-            lastUpdate: new Date().toLocaleString('es-CR', { timeZone: 'America/Costa_Rica' }), 
-            bscData: bscData, // <--- Nueva tabla para la Sección 1
-            items: Array.from(kpiMap.values()) 
+        const data = {
+            lastUpdate: new Date().toLocaleString('es-CR', { timeZone: 'America/Costa_Rica' }),
+            bscData: bscData, // <--- ESTO ES LO QUE FALTA EN TU JSON
+            items: items
         };
 
-        fs.writeFileSync('./site/data.json', JSON.stringify(data, null, 2));
-        console.log("✅ data.json generado con éxito en /site");
-        
-    } catch (e) { 
-        console.error("❌ Error en el proceso de build:", e.message); 
+        fs.writeFileSync('site/data.json', JSON.stringify(data, null, 2));
+        console.log("✅ data.json actualizado con éxito");
+    } catch (err) {
+        console.error("❌ Error:", err);
+        process.exit(1);
     }
 }
 
-process();
+update();
