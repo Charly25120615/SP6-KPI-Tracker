@@ -2,43 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>SP6 — Dashboard Corregido</title>
+    <title>Dashboard Táctico BSC SP6</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../pared.jpg');
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('../pared.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            min-height: screen;
         }
-        .glass { background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px); }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.2); }
     </style>
 </head>
-<body class="p-4 md:p-8 text-slate-900">
+<body class="p-4 md:p-12 text-slate-900 font-sans">
     <div class="max-w-7xl mx-auto">
-        <header class="mb-8 flex justify-between items-center bg-black/40 p-6 rounded-2xl border border-white/10">
-            <h1 class="text-3xl font-black text-white italic tracking-tighter">SP6 <span class="text-red-500 underline">2026</span></h1>
-            <p id="time" class="text-white/80 font-bold bg-red-600 px-4 py-1 rounded-full text-xs"></p>
+        <header class="mb-12 flex flex-col md:flex-row justify-between items-center bg-black/40 p-8 rounded-[2rem] border border-white/10 shadow-2xl">
+            <div>
+                <h1 class="text-3xl font-black text-white tracking-tighter uppercase italic">Dashboard Táctico BSC</h1>
+                <p class="text-red-500 font-bold text-xl">SP6 Tecnologías 2026</p>
+            </div>
+            <p id="time" class="text-white/60 font-mono text-sm mt-4 md:mt-0 bg-white/5 px-4 py-2 rounded-xl"></p>
         </header>
 
-        <h2 class="text-white font-black mb-4 uppercase tracking-widest text-sm border-l-4 border-red-600 pl-3">1. Balance Scorecard</h2>
-        <div id="bsc-container" class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12"></div>
+        <h2 class="text-white font-black mb-6 uppercase tracking-[0.2em] text-sm border-l-4 border-red-600 pl-4">1. Resumen de Perspectivas</h2>
+        <div id="bsc-container" class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"></div>
 
-        <div class="glass p-6 rounded-[2rem] shadow-2xl mb-12">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
-                <h2 class="text-xl font-black text-slate-800 uppercase italic">Análisis Dinámico de Tendencia</h2>
-                <select id="kpi-selector" class="bg-slate-200 border-none p-3 rounded-xl font-bold text-red-600 w-full md:w-80"></select>
+        <div class="glass p-8 rounded-[3rem] shadow-2xl mb-16">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                <h2 class="text-2xl font-black text-slate-800 uppercase italic leading-none">Análisis Dinámico de Tendencia</h2>
+                <select id="kpi-selector" class="bg-slate-100 border-2 border-slate-200 p-4 rounded-2xl font-bold text-red-600 w-full md:w-[30rem] focus:ring-4 ring-red-500/20 transition-all cursor-pointer"></select>
             </div>
-            <div class="h-64"><canvas id="main-chart"></canvas></div>
+            <div class="h-80"><canvas id="main-chart"></canvas></div>
         </div>
 
-        <h2 class="text-white font-black mb-4 uppercase tracking-widest text-sm border-l-4 border-blue-500 pl-3">2. Detalle de KPIs por Segmento</h2>
-        <div id="kpi-groups" class="space-y-10 mb-12"></div>
+        <h2 class="text-white font-black mb-6 uppercase tracking-[0.2em] text-sm border-l-4 border-blue-500 pl-4">2. Detalle de KPIs por Segmento</h2>
+        <div id="kpi-groups" class="space-y-16 mb-20"></div>
 
-        <h2 class="text-white font-black mb-4 uppercase tracking-widest text-sm border-l-4 border-green-500 pl-3">3. Desempeño de Gerencia</h2>
-        <div id="lideres-container" class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-10"></div>
+        <h2 class="text-white font-black mb-6 uppercase tracking-[0.2em] text-sm border-l-4 border-green-500 pl-4">3. Desempeño Gerencial</h2>
+        <div id="lideres-container" class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-10"></div>
     </div>
 
     <script>
@@ -49,23 +51,23 @@
         async function init() {
             const res = await fetch('data.json');
             globalData = await res.json();
-            document.getElementById('time').innerText = `Sync: ${globalData.lastUpdate}`;
+            document.getElementById('time').innerText = `Sincronizado: ${globalData.lastUpdate}`;
 
-            // Sec 1
+            // Render Perspectivas
             document.getElementById('bsc-container').innerHTML = globalData.bscData.map(i => `
-                <div class="${getBg(i.nota)} p-5 rounded-2xl text-white shadow-lg border border-white/20">
-                    <p class="text-[9px] font-bold uppercase opacity-80">${i.categoria}</p>
-                    <p class="text-3xl font-black">${i.nota.toFixed(1)}%</p>
+                <div class="${getBg(i.nota)} p-8 rounded-3xl text-white shadow-xl">
+                    <p class="text-[10px] font-black uppercase opacity-70 mb-2 tracking-widest">${i.categoria}</p>
+                    <p class="text-4xl font-black">${i.nota.toFixed(1)}%</p>
                 </div>
             `).join('');
 
-            // Selector e Histograma
+            // Selector de KPIs (Columna F)
             const selector = document.getElementById('kpi-selector');
             selector.innerHTML = globalData.kpis.map((k, idx) => `<option value="${idx}">${k.nombre}</option>`).join('');
             selector.addEventListener('change', (e) => updateChart(e.target.value));
             updateChart(0);
 
-            // Sec 2 - Tarjetas
+            // Render KPIs por Tarjetas (Unificado)
             const groups = globalData.kpis.reduce((acc, k) => {
                 acc[k.categoria] = acc[k.categoria] || [];
                 acc[k.categoria].push(k);
@@ -74,15 +76,18 @@
 
             document.getElementById('kpi-groups').innerHTML = Object.entries(groups).map(([cat, kpis]) => `
                 <div>
-                    <h3 class="text-white text-xs font-black mb-3 uppercase opacity-60 ml-1 italic">${cat}</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <h3 class="text-white text-xl font-black mb-6 uppercase opacity-90 italic ml-2">${cat}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         ${kpis.map(k => `
-                            <div class="glass p-5 rounded-2xl border-b-4 ${k.nota >= 90 ? 'border-green-500' : k.nota >= 80 ? 'border-yellow-500' : 'border-red-500'}">
-                                <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-tighter">${cat}</p>
-                                <p class="font-bold text-slate-800 leading-tight mb-3 text-sm h-8 overflow-hidden">${k.nombre}</p>
-                                <div class="flex justify-between items-end border-t pt-2">
-                                    <p class="text-2xl font-black ${getCol(k.nota)}">${k.nota}%</p>
-                                    <p class="text-[9px] font-bold text-slate-400">META: ${k.meta}</p>
+                            <div class="glass p-6 rounded-[2rem] border-b-8 ${k.nota >= 90 ? 'border-green-500' : k.nota >= 80 ? 'border-yellow-500' : 'border-red-500'} hover:translate-y-[-4px] transition-transform">
+                                <p class="text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-tighter border-b pb-2">${cat}</p>
+                                <p class="font-black text-slate-800 text-[13px] leading-tight mb-6 h-10 overflow-hidden">${k.nombre}</p>
+                                <div class="flex justify-between items-end">
+                                    <p class="text-4xl font-black ${getCol(k.nota)}">${k.nota}%</p>
+                                    <div class="text-right">
+                                        <p class="text-[9px] font-bold text-slate-400 uppercase leading-none">Meta Anual</p>
+                                        <p class="text-xs font-black text-slate-600">${k.meta}</p>
+                                    </div>
                                 </div>
                             </div>
                         `).join('')}
@@ -90,11 +95,11 @@
                 </div>
             `).join('');
 
-            // Sec 3 - Gerentes (Solo tarjetas de rango F47:G56)
+            // Render Gerencia
             document.getElementById('lideres-container').innerHTML = globalData.lideres.map(l => `
-                <div class="glass p-4 rounded-xl text-center border border-white/20">
-                    <p class="font-bold text-slate-700 text-xs mb-1 truncate">${l.nombre}</p>
-                    <p class="text-xl font-black ${getCol(l.nota)}">${l.nota}%</p>
+                <div class="glass p-6 rounded-2xl text-center shadow-lg border border-white/20">
+                    <p class="font-black text-slate-800 text-xs mb-2 truncate uppercase tracking-tighter">${l.nombre}</p>
+                    <p class="text-3xl font-black ${getCol(l.nota)}">${l.nota}%</p>
                 </div>
             `).join('');
         }
@@ -108,16 +113,23 @@
                 data: {
                     labels: globalData.meses,
                     datasets: [{
-                        label: kpi.nombre,
+                        label: 'Desempeño %',
                         data: kpi.trend,
-                        backgroundColor: '#ef4444',
-                        borderRadius: 5
+                        backgroundColor: '#dc2626',
+                        borderRadius: 12,
+                        hoverBackgroundColor: '#991b1b'
                     }]
                 },
                 options: { 
                     maintainAspectRatio: false, 
-                    plugins: { legend: { display: false }, title: { display: true, text: kpi.nombre, font: { weight: 'bold' } } },
-                    scales: { y: { beginAtZero: true } }
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { backgroundColor: '#1e293b', titleFont: { size: 14 }, padding: 12 }
+                    },
+                    scales: { 
+                        y: { beginAtZero: true, max: 100, grid: { color: '#f1f5f9' } },
+                        x: { grid: { display: false } }
+                    }
                 }
             });
         }
