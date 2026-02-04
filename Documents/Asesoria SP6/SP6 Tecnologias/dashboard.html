@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Tracker 2026 - SP6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-slate-50 p-4 md:p-10 text-slate-900 font-sans">
+    <div class="max-w-7xl mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <div>
+                <h1 class="text-4xl font-extrabold text-indigo-950 tracking-tight">Tracker KPIs 2026</h1>
+                <p id="time" class="text-slate-500 font-medium mt-1 italic"></p>
+            </div>
+            <div class="bg-white px-6 py-2 rounded-full shadow-sm border border-slate-200">
+                <span class="text-indigo-600 font-bold">Status:</span> 🟢 Sincronizado
+            </div>
+        </header>
+
+        <h2 class="text-xl font-bold mb-6 text-slate-700 flex items-center">
+            <span class="bg-indigo-600 w-2 h-6 rounded mr-3"></span> SECCIÓN 1 — Resumen Balance Scorecard
+        </h2>
+        <div id="bsc" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"></div>
+
+        <h2 class="text-xl font-bold mb-6 text-slate-700 flex items-center">
+            <span class="bg-indigo-600 w-2 h-6 rounded mr-3"></span> SECCIÓN 2 — Análisis de Tendencias
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-100 overflow-y-auto max-h-[500px]">
+                <h3 class="font-bold text-slate-500 text-sm uppercase mb-4 tracking-widest">Lista de KPIs</h3>
+                <div id="list" class="space-y-3"></div>
+            </div>
+            <div class="lg:col-span-2 bg-white p-8 rounded-3xl shadow-xl shadow-indigo-100/50 border border-slate-100">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+                    <h3 class="font-bold text-indigo-900">Histórico Mensual (H-S)</h3>
+                    <select id="sel" class="p-3 bg-indigo-50 border-none rounded-xl font-bold text-indigo-700 ring-2 ring-indigo-100 focus:ring-indigo-500 outline-none transition-all"></select>
+                </div>
+                <canvas id="chart" height="140"></canvas>
+            </div>
+        </div>
+
+        <h2 class="text-xl font-bold mb-6 text-slate-700 flex items-center">
+            <span class="bg-indigo-600 w-2 h-6 rounded mr-3"></span> SECCIÓN 3 — Desempeño por Responsable
+        </h2>
+        <div class="relative mb-8">
+            <input type="text" id="search" placeholder="🔍 Buscar responsable por nombre..." class="w-full p-5 pl-14 rounded-2xl border-none shadow-lg bg-white focus:ring-4 focus:ring-indigo-200 transition-all text-lg">
+            <div class="absolute left-5 top-5 opacity-30 text-xl">👤</div>
+        </div>
+        <div id="emps" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <script>
+        async function run() {
+            try {
+                const res = await fetch('data.json');
+                const d = await res.json();
+                document.getElementById('time').innerText = 'Actualizado: ' + d.lastUpdate;
+
+                // --- SECCIÓN 1: BSC CARDS ---
+                const rubros = [...new Set(d.items.map(i => i.rubro))];
+                const bscContainer = document.getElementById('bsc');
+                rubros.forEach(r => {
+                    const group = d.items.filter(i => i.rubro === r);
+                    const avg = group.reduce((a, b) => a + b.notaY, 0) / group.length;
+                    const color = avg >= 90 ? 'bg-emerald-500' : avg >= 75 ? 'bg-amber-500' : 'bg-rose-500';
+                    bscContainer.innerHTML += `
+                        <div class="${color} p-8 rounded-[2rem] text-white shadow-lg transform hover:scale-105 transition-all">
+                            <p class="text-[10px] uppercase font-black opacity-70 tracking-widest mb-2">${r}</p>
+                            <p class="text-4xl font-black">${avg.toFixed(1)}%</p>
+                            <div class="w-full bg-white/20 h-1 rounded-full mt-4">
+                                <div class="bg-white h-1 rounded-full" style="width: ${avg}%"></div>
+                            </div>
+                        </div>`;
+                });
+
+                // --- SECCIÓN 2: LISTADO Y CHART ---
+                const ctx = document.getElementById('chart').getContext('2d');
+                let chart;
+                const listContainer = document.getElementById('list');
+                const select = document.getElementById('sel');
+
+                d.items.forEach((item, i) => {
+                    select.innerHTML += `<option value="${i}">${item.kpi}</option>`;
+                    listContainer.innerHTML += `
+                        <div class="flex justify-between items-center p-3 hover:bg-indigo-50 rounded-xl transition-all border-b border-slate-50 group">
+                            <span class="text-sm font-semibold text-slate-600 group-hover:text-indigo-700">${item.kpi}</span>
+                            <span class="px-3 py-1 rounded-lg bg-slate-100 text-indigo-900 font-bold text-xs">${item.notaW.toFixed(1)}</span>
+                        </div>`;
+                });
+
+                const updateChart = (idx) => {
+                    if(chart) chart.destroy();
+                    const kpi = d.items[idx];
+                    chart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+                            datasets: [{
+                                label: kpi.kpi,
+                                data: kpi.trend,
+                                borderColor: '#4f46e5',
+                                backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                                borderWidth: 4,
+                                fill: true,
+                                tension: 0.4,
+                                pointBackgroundColor: '#4f46e5',
+                                pointRadius: 5
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: { legend: { display: false } },
+                            scales: { y: { beginAtZero: true, grid: { color: '#f1f5f9' } }, x: { grid: { display: false } } }
+                        }
+                    });
+                };
+                select.onchange = (e) => updateChart(e.target.value);
+                updateChart(0);
+
+                // --- SECCIÓN 3: EMPLEADOS ---
+                const renderEmps = (filter = '') => {
+                    const container = document.getElementById('emps');
+                    container.innerHTML = '';
+                    const emps = [...new Set(d.items.map(i => i.empleado))].map(n => {
+                        const rows = d.items.filter(i => i.empleado === n);
+                        const avg = rows.reduce((a, b) => a + b.notaW, 0) / rows.length;
+                        return { n, avg };
+                    }).sort((a,b) => b.avg - a.avg);
+
+                    emps.filter(e => e.n.toLowerCase().includes(filter.toLowerCase())).forEach(e => {
+                        container.innerHTML += `
+                            <div class="bg-white p-6 rounded-3xl border-l-8 border-indigo-500 shadow-sm hover:shadow-xl transition-all">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Responsable</p>
+                                <p class="font-black text-slate-800 text-xl leading-tight">${e.n}</p>
+                                <div class="mt-4 flex items-baseline gap-2">
+                                    <span class="text-3xl font-black text-indigo-600">${e.avg.toFixed(1)}</span>
+                                    <span class="text-xs text-slate-400 font-bold uppercase">Nota Promedio</span>
+                                </div>
+                            </div>`;
+                    });
+                };
+                renderEmps();
+                document.getElementById('search').oninput = (e) => renderEmps(e.target.value);
+
+            } catch (err) {
+                console.error("Error cargando dashboard:", err);
+            }
+        }
+        run();
+    </script>
+</body>
+</html>
