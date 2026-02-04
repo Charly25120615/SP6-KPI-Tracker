@@ -46,7 +46,7 @@
                 globalData = await res.json();
                 document.getElementById('time').innerText = `Sync: ${globalData.lastUpdate}`;
 
-                // 1. Render Perspectivas (Cabecera)
+                // 1. Render Perspectivas (Resumen Superior)
                 document.getElementById('bsc-container').innerHTML = globalData.bscData.map(i => `
                     <div class="${getBg(i.nota)} p-8 rounded-3xl text-white shadow-xl transform hover:scale-105 transition duration-300">
                         <p class="text-[10px] font-black uppercase opacity-70 mb-2 tracking-widest">${i.categoria}</p>
@@ -54,8 +54,7 @@
                     </div>
                 `).join('');
 
-                // 2. Render KPIs Agrupados (Financiero, Cliente, Procesos, Aprendizaje)
-                // Se utiliza la misma fuente de datos 'globalData.kpis' para todos los grupos
+                // 2. Render KPIs Agrupados (Estructura Unificada)
                 const groups = globalData.kpis.reduce((acc, k) => {
                     acc[k.categoria] = acc[k.categoria] || [];
                     acc[k.categoria].push(k);
@@ -87,10 +86,11 @@
                     </div>
                 `).join('');
 
-                // 3. Render Gerencia (Pie)
+                // 3. Render Gerencia (Sección de Líderes)
                 document.getElementById('lideres-container').innerHTML = globalData.lideres.map(l => `
                     <div class="glass p-6 rounded-2xl text-center shadow-lg border-t-4 ${getBorder(l.nota)} transform hover:scale-105 transition duration-300">
-                        <p class="font-black text-slate-800 text-xs mb-2 truncate uppercase tracking-tighter">${l.nombre}</p>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">LÍDER</p>
+                        <p class="font-black text-slate-800 text-sm mb-3 truncate uppercase tracking-tighter">${l.nombre}</p>
                         <p class="text-3xl font-black ${getCol(l.nota)}">${l.nota}%</p>
                     </div>
                 `).join('');
