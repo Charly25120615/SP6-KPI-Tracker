@@ -12,7 +12,7 @@
         <header class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
             <div>
                 <h1 class="text-4xl font-extrabold text-indigo-950 tracking-tight">Tracker KPIs 2026</h1>
-                <p id="time" class="text-slate-500 font-medium mt-1 italic"></p>
+                <p id="time" class="text-slate-500 font-medium mt-1 italic">Cargando datos...</p>
             </div>
             <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
                 <span class="text-indigo-600 font-bold text-sm">Status:</span>
@@ -24,7 +24,7 @@
 
         <section class="mb-12">
             <div class="flex items-center gap-3 mb-6">
-                <div class="w-1.5 h-8 bg-indigo-600 rounded-full"></div>
+                <div class="w-1.5 h-8 bg-red-600 rounded-full"></div>
                 <h2 class="text-2xl font-bold text-slate-800 tracking-tight">SECCIÓN 1 — Resumen Balance Scorecard</h2>
             </div>
             <div id="bsc-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -60,8 +60,10 @@
     <script>
         async function loadDashboard() {
             try {
-                // Cargamos el JSON generado por GitHub Actions
+                // Buscamos el archivo JSON que genera el build.js
                 const response = await fetch('data.json');
+                if (!response.ok) throw new Error("No se pudo cargar data.json");
+                
                 const data = await response.json();
 
                 // 1. Actualizar fecha de sincronización
@@ -75,16 +77,18 @@
 
             } catch (error) {
                 console.error("Error cargando el dashboard:", error);
+                document.getElementById('time').innerText = "Error al sincronizar datos";
             }
         }
 
+        // Función específica para la SECCIÓN 1 solicitada
         function renderBSC(bscData) {
             const container = document.getElementById('bsc-container');
             if (!container || !bscData) return;
 
             container.innerHTML = bscData.map(item => `
                 <div class="bg-red-500 text-white p-6 rounded-3xl shadow-lg transition-transform hover:scale-105">
-                    <p class="text-xs font-bold uppercase opacity-80 mb-2">${item.categoria}</p>
+                    <p class="text-[10px] font-bold uppercase opacity-80 mb-2 tracking-wider">${item.categoria}</p>
                     <h2 class="text-5xl font-extrabold">${item.nota.toFixed(1)}%</h2>
                     <div class="w-full bg-white/20 h-1.5 mt-4 rounded-full overflow-hidden">
                         <div class="bg-white h-full" style="width: ${item.nota}%"></div>
@@ -102,9 +106,7 @@
                     <td class="px-6 py-5 font-bold text-indigo-900 text-sm">${item.rubro}</td>
                     <td class="px-6 py-5 text-slate-600 font-medium text-sm">${item.empleado}</td>
                     <td class="px-6 py-5 text-slate-800 font-semibold text-sm leading-tight">${item.kpi}</td>
-                    <td class="px-6 py-5 text-center">
-                        <span class="px-3 py-1 bg-slate-100 rounded-lg font-bold text-slate-700">${item.notaW}%</span>
-                    </td>
+                    <td class="px-6 py-5 text-center font-bold text-slate-700">${item.notaW}%</td>
                     <td class="px-6 py-5 text-center">
                         <span class="px-3 py-1 ${item.notaY >= 80 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'} rounded-lg font-bold">
                             ${item.notaY}%
@@ -116,7 +118,7 @@
                 </tr>
             `).join('');
 
-            // Crear los gráficos de tendencia para cada fila
+            // Generar los mini-gráficos de tendencia
             items.forEach((item, idx) => {
                 const ctx = document.getElementById(`chart-${idx}`).getContext('2d');
                 new Chart(ctx, {
@@ -141,7 +143,7 @@
             });
         }
 
-        // Iniciar carga
+        // Ejecutar al cargar la página
         loadDashboard();
     </script>
 </body>
