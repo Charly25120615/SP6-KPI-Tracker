@@ -3,39 +3,42 @@ const fs = require('fs');
 
 async function update() {
     try {
-        const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRAt2WlR-jN3_e0hP-44o5Xl_D6A8YJ5M60L_8h4S8Q3Z-jA5S0/pub?output=csv';
+        // URL actualizada con el enlace que me pasaste
+        const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSPotKOx5NYnEXNJKl-9oof0awv1vlzzIw_imGVWQRRnLvArsydB4bfb8PiKZsxCg/pub?output=csv';
+        
+        console.log("Conectando con Google Sheets...");
         const res = await axios.get(url);
         
-        // Dividimos el contenido en filas, manejando posibles saltos de línea raros
-        const rows = res.data.split(/\r?\n/).map(row => row.split(',').map(cell => cell.replace(/"/g, '').trim()));
+        // Procesamiento de filas
+        const rows = res.data.split(/\r?\n/).map(row => 
+            row.split(',').map(cell => cell.replace(/"/g, '').trim())
+        );
 
-        console.log(`Leídas ${rows.length} filas del Excel.`);
+        console.log(`Datos recibidos: ${rows.length} filas encontradas.`);
 
-        // SECCIÓN 1: Balance Scorecard (B46:D50 del Excel original)
-        // Usamos índices seguros. Si la fila no existe, usamos valores vacíos.
+        // SECCIÓN 1: Balance Scorecard (Filas 46 a 49 del Excel)
         const bscData = [];
-        const indicesBSC = [45, 46, 47, 48]; // Correspondiente a las filas 46-49
-        
+        const indicesBSC = [45, 46, 47, 48]; 
         indicesBSC.forEach(idx => {
-            const row = rows[idx] || [];
-            bscData.push({
-                categoria: row[1] || "Categoría",
-                nota: parseFloat(row[3]) || 0
-            });
+            if (rows[idx]) {
+                bscData.push({
+                    categoria: rows[idx][1] || "Categoría",
+                    nota: parseFloat(rows[idx][3]) || 0
+                });
+            }
         });
 
-        // SECCIÓN 2: Tabla de KPIs (Filas 2 a 33 del Excel)
+        // SECCIÓN 2: Detalle de KPIs (Filas 2 a 33 del Excel)
         const items = [];
         for (let i = 1; i <= 32; i++) {
-            const row = rows[i] || [];
-            if (row.length > 0) {
+            if (rows[i] && rows[i].length > 5) {
                 items.push({
-                    rubro: row[1] || "",
-                    empleado: row[2] || "",
-                    kpi: row[3] || "",
-                    notaW: parseFloat(row[22]) || 0,
-                    notaY: parseFloat(row[24]) || 0,
-                    trend: row.slice(6, 18).map(v => parseFloat(v) || 0)
+                    rubro: rows[i][1] || "",
+                    empleado: rows[i][2] || "",
+                    kpi: rows[i][3] || "",
+                    notaW: parseFloat(rows[i][22]) || 0,
+                    notaY: parseFloat(rows[i][24]) || 0,
+                    trend: rows[i].slice(6, 18).map(v => parseFloat(v) || 0)
                 });
             }
         }
@@ -46,13 +49,13 @@ async function update() {
             items: items
         };
 
-        // Asegurar que la carpeta 'site' existe antes de escribir
+        // Verificamos que la carpeta 'site' exista para guardar data.json
         if (!fs.existsSync('site')) {
             fs.mkdirSync('site');
         }
         
         fs.writeFileSync('site/data.json', JSON.stringify(data, null, 2));
-        console.log("✅ data.json generado con éxito.");
+        console.log("✅ ¡Archivo site/data.json actualizado con éxito!");
 
     } catch (err) {
         console.error("❌ ERROR CRÍTICO:", err.message);
