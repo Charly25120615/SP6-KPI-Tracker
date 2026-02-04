@@ -1,31 +1,31 @@
 name: Actualizar Datos KPI
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Descargar repositorio
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Configurar Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      - name: Instalar dependencias necesarias
-        run: npm install axios csv-parse  # <-- Esto es lo que faltaba
+      - name: Install dependencies
+        run: npm install axios
 
-      - name: Ejecutar procesador de datos
+      - name: Run script
         run: node scripts/build.js
 
-      - name: Guardar cambios en GitHub
+      - name: Commit and Push
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add site/data.json
-          git commit -m "🔄 Actualización automática de KPIs" || exit 0
+          git commit -m "Actualización de datos" || echo "No hay cambios"
           git push
