@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "4/2/2026, 10:58:28 a. m.",
+  "lastUpdate": "4/2/2026, 11:17:21 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -7,7 +7,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nota": 95
+      "nota": 100
     },
     {
       "categoria": "3. Procesos",
@@ -125,7 +125,7 @@
       "categoria": "2. Cliente",
       "nombre": "Cumplir con los mantenimientos programados mensual",
       "meta": ">= 80%",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "2. Cliente",
@@ -313,11 +313,11 @@
     },
     {
       "nombre": "Jonathan Solera",
-      "nota": 75
+      "nota": 100
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 82
+      "nota": 85
     }
   ]
 }
