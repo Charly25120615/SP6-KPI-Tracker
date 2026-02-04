@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "4/2/2026, 2:17:14 a. m.",
+  "lastUpdate": "4/2/2026, 2:27:40 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -7,7 +7,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nota": 92
+      "nota": 95
     },
     {
       "categoria": "3. Procesos",
@@ -105,7 +105,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Net promote Score",
+      "nombre": "NPS - Proyectos",
       "meta": ">= 60",
       "nota": 100
     },
@@ -123,7 +123,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Net promote Score",
+      "nombre": "NPS - Boletas TI",
       "meta": ">= 60",
       "nota": 100
     },
@@ -135,7 +135,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Net promote Score",
+      "nombre": "NPS - Boletas",
       "meta": ">= 60",
       "nota": 100
     },
@@ -153,9 +153,9 @@
     },
     {
       "categoria": "2. Cliente",
-      "nombre": "Net promote Score: Alarmas corporativas y Automatizaciones",
+      "nombre": "NPS - Monitoreo",
       "meta": ">= 60",
-      "nota": 70
+      "nota": 100
     },
     {
       "categoria": "2. Cliente",
@@ -165,25 +165,25 @@
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Comercial",
       "meta": "90%",
       "nota": 70
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Proyectos",
       "meta": "90%",
       "nota": 80
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Auxiliar Conta",
       "meta": "90%",
       "nota": 100
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - TI",
       "meta": "90%",
       "nota": 70
     },
@@ -201,7 +201,7 @@
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumple o No",
+      "nombre": "Reporteria Inventario Leasing",
       "meta": "1",
       "nota": 0
     },
@@ -213,31 +213,31 @@
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Proveeduria",
       "meta": "90%",
       "nota": 70
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Gestor Boletas",
       "meta": "90%",
       "nota": 100
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Monitoreo",
       "meta": "90%",
       "nota": 80
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "Cumplan la fecha de vencimiento",
+      "nombre": "Resolución de Blocker - Finanzas",
       "meta": "90%",
       "nota": 70
     },
     {
       "categoria": "3. Procesos",
-      "nombre": "al menos 1 proyecto trimestral de eficientizar la empresa",
+      "nombre": "Proyecto trimestral de eficientizar la empresa",
       "meta": ">=1",
       "nota": 80
     },
@@ -255,25 +255,25 @@
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Al menos 1 capacitación al mes",
+      "nombre": "1 capacitación al mes - Técnica",
       "meta": "12.00",
       "nota": 100
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Medir el nivel neto que el empleado promueve el trabajo",
+      "nombre": "eNPS - Monitoreo",
       "meta": "70%",
       "nota": 80
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Al menos 1 capacitación al mes",
+      "nombre": "1 capacitación al mes - Monitoreo",
       "meta": "1.00",
       "nota": 100
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nombre": "Al menos 1 capacitación al mes",
+      "nombre": "1 capacitación al mes - Habilidades",
       "meta": "1.00",
       "nota": 100
     }
@@ -301,7 +301,7 @@
     },
     {
       "nombre": "Michelle Quesada",
-      "nota": 86
+      "nota": 92
     },
     {
       "nombre": "Henry Sánchez",
