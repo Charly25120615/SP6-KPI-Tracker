@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "10/3/2026, 1:46:19 p. m.",
+  "lastUpdate": "10/3/2026, 2:41:05 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -203,7 +203,7 @@
       "categoria": "3. Procesos",
       "nombre": "Resolución de Blocker - Comercial",
       "meta": "90%",
-      "nota": 70
+      "nota": 80
     },
     {
       "categoria": "3. Procesos",
@@ -281,7 +281,7 @@
   "lideres": [
     {
       "nombre": "Aksana Martínez",
-      "nota": 74
+      "nota": 76
     },
     {
       "nombre": "Allan Zamora",
