@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "10/3/2026, 12:59:21 p. m.",
+  "lastUpdate": "10/3/2026, 1:46:19 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -7,7 +7,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nota": 99
+      "nota": 96
     },
     {
       "categoria": "3. Procesos",
@@ -149,7 +149,7 @@
       "categoria": "2. Cliente",
       "nombre": "NPS - Monitoreo",
       "meta": ">= 60",
-      "nota": 100
+      "nota": 71
     },
     {
       "categoria": "2. Cliente",
@@ -301,7 +301,7 @@
     },
     {
       "nombre": "Michelle Quesada",
-      "nota": 90
+      "nota": 84
     },
     {
       "nombre": "Henry Sánchez",
