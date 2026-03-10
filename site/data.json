@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "10/3/2026, 11:51:53 a. m.",
+  "lastUpdate": "10/3/2026, 12:59:21 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -7,7 +7,7 @@
     },
     {
       "categoria": "2. Cliente",
-      "nota": 100
+      "nota": 99
     },
     {
       "categoria": "3. Procesos",
@@ -119,7 +119,7 @@
       "categoria": "2. Cliente",
       "nombre": "Cantidad de salidas de clientes",
       "meta": "<=2%",
-      "nota": 100
+      "nota": 90
     },
     {
       "categoria": "2. Cliente",
@@ -301,7 +301,7 @@
     },
     {
       "nombre": "Michelle Quesada",
-      "nota": 92
+      "nota": 90
     },
     {
       "nombre": "Henry Sánchez",
@@ -317,7 +317,7 @@
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 85
+      "nota": 84
     }
   ]
 }
