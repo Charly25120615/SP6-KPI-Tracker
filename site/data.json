@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "10/3/2026, 11:32:43 p. m.",
+  "lastUpdate": "10/3/2026, 11:45:15 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
@@ -7,11 +7,11 @@
     },
     {
       "categoria": "2. Cliente",
-      "nota": 96
+      "nota": 92
     },
     {
       "categoria": "3. Procesos",
-      "nota": 88
+      "nota": 93
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
@@ -155,7 +155,7 @@
       "categoria": "2. Cliente",
       "nombre": "NPS - Proyectos",
       "meta": ">= 60",
-      "nota": 100
+      "nota": 74
     },
     {
       "categoria": "2. Cliente",
@@ -179,7 +179,7 @@
       "categoria": "3. Procesos",
       "nombre": "Proyecto trimestral de eficientizar la empresa",
       "meta": ">=1",
-      "nota": 80
+      "nota": 100
     },
     {
       "categoria": "3. Procesos",
@@ -239,7 +239,7 @@
       "categoria": "3. Procesos",
       "nombre": "Resolución de Blocker - TI",
       "meta": "90%",
-      "nota": 70
+      "nota": 80
     },
     {
       "categoria": "3. Procesos",
@@ -285,7 +285,7 @@
     },
     {
       "nombre": "Allan Zamora",
-      "nota": 97
+      "nota": 92
     },
     {
       "nombre": "Brenda Guzmán",
@@ -293,11 +293,11 @@
     },
     {
       "nombre": "Bryan Oporta",
-      "nota": 90
+      "nota": 93
     },
     {
       "nombre": "Charlie Castro",
-      "nota": 90
+      "nota": 100
     },
     {
       "nombre": "Michelle Quesada",
@@ -317,7 +317,7 @@
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 92
+      "nota": 93
     }
   ]
 }
