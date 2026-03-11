@@ -1,9 +1,9 @@
 {
-  "lastUpdate": "10/3/2026, 10:48:07 p. m.",
+  "lastUpdate": "10/3/2026, 11:32:43 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
-      "nota": 55
+      "nota": 85
     },
     {
       "categoria": "2. Cliente",
@@ -29,13 +29,13 @@
       "categoria": "1. Financiero",
       "nombre": "EBITDA",
       "meta": ">10%",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "1. Financiero",
       "nombre": "Gastos mensuales",
       "meta": "<=1%",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "1. Financiero",
@@ -47,7 +47,7 @@
       "categoria": "1. Financiero",
       "nombre": "Precisión presupuestaria",
       "meta": "1",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "1. Financiero",
@@ -65,7 +65,7 @@
       "categoria": "1. Financiero",
       "nombre": "Solvencia a corto plazo",
       "meta": ">1.5",
-      "nota": 0
+      "nota": 100
     },
     {
       "categoria": "1. Financiero",
@@ -209,7 +209,7 @@
       "categoria": "3. Procesos",
       "nombre": "Resolución de Blocker - Finanzas",
       "meta": "90%",
-      "nota": 70
+      "nota": 80
     },
     {
       "categoria": "3. Procesos",
@@ -309,7 +309,7 @@
     },
     {
       "nombre": "Sirley Montero",
-      "nota": 28
+      "nota": 97
     },
     {
       "nombre": "Jonathan Solera",
@@ -317,7 +317,7 @@
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 84
+      "nota": 92
     }
   ]
 }
