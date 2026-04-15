@@ -1,21 +1,21 @@
 {
-  "lastUpdate": "15/4/2026, 9:16:46 a. m.",
+  "lastUpdate": "15/4/2026, 11:13:26 a. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
-      "nota": 85
+      "nota": 83
     },
     {
       "categoria": "2. Cliente",
-      "nota": 92
+      "nota": 0
     },
     {
       "categoria": "3. Procesos",
-      "nota": 93
+      "nota": 88
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
-      "nota": 96
+      "nota": 60
     }
   ],
   "kpis": [
@@ -83,7 +83,7 @@
       "categoria": "1. Financiero",
       "nombre": "Ventas nuevas mensuales",
       "meta": ">= 4M",
-      "nota": 100
+      "nota": 90
     },
     {
       "categoria": "2. Cliente",
@@ -95,7 +95,7 @@
       "categoria": "2. Cliente",
       "nombre": "Al menos 4 innovaciones mensuales",
       "meta": "50.00",
-      "nota": 100
+      "nota": 0
     },
     {
       "categoria": "2. Cliente",
@@ -113,7 +113,7 @@
       "categoria": "2. Cliente",
       "nombre": "Cantidad de líneas de negocio 4 mensuales",
       "meta": "50",
-      "nota": 100
+      "nota": 133
     },
     {
       "categoria": "2. Cliente",
@@ -149,7 +149,7 @@
       "categoria": "2. Cliente",
       "nombre": "NPS - Monitoreo",
       "meta": ">= 60",
-      "nota": 71
+      "nota": 72
     },
     {
       "categoria": "2. Cliente",
@@ -191,7 +191,7 @@
       "categoria": "3. Procesos",
       "nombre": "Reporteria Inventario Leasing",
       "meta": "1",
-      "nota": 100
+      "nota": 0
     },
     {
       "categoria": "3. Procesos",
@@ -263,7 +263,7 @@
       "categoria": "4. Aprendizaje & Crecimiento",
       "nombre": "1 capacitación al mes - Técnica",
       "meta": "12.00",
-      "nota": 100
+      "nota": 0
     },
     {
       "categoria": "4. Aprendizaje & Crecimiento",
@@ -275,17 +275,17 @@
       "categoria": "4. Aprendizaje & Crecimiento",
       "nombre": "eNPS - Monitoreo",
       "meta": "70%",
-      "nota": 80
+      "nota": 0
     }
   ],
   "lideres": [
     {
       "nombre": "Aksana Martínez",
-      "nota": 76
+      "nota": 81
     },
     {
       "nombre": "Allan Zamora",
-      "nota": 92
+      "nota": 0
     },
     {
       "nombre": "Brenda Guzmán",
@@ -301,11 +301,11 @@
     },
     {
       "nombre": "Michelle Quesada",
-      "nota": 84
+      "nota": 68
     },
     {
       "nombre": "Henry Sánchez",
-      "nota": 95
+      "nota": 78
     },
     {
       "nombre": "Sirley Montero",
@@ -317,7 +317,7 @@
     },
     {
       "nombre": "Neskeen Ruiz",
-      "nota": 93
+      "nota": 0
     }
   ]
 }
