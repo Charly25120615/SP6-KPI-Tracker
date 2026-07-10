@@ -1,9 +1,9 @@
 {
-  "lastUpdate": "10/7/2026, 11:02:04 a. m.",
+  "lastUpdate": "10/7/2026, 1:41:25 p. m.",
   "bscData": [
     {
       "categoria": "1. Financiero",
-      "nota": 83
+      "nota": 84
     },
     {
       "categoria": "2. Cliente",
@@ -71,7 +71,7 @@
       "categoria": "1. Financiero",
       "nombre": "Tasa de Cobra",
       "meta": "80%",
-      "nota": 90
+      "nota": 100
     },
     {
       "categoria": "1. Financiero",
@@ -289,7 +289,7 @@
     },
     {
       "nombre": "Brenda Guzmán",
-      "nota": 98
+      "nota": 100
     },
     {
       "nombre": "Bryan Oporta",
